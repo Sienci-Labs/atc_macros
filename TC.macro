@@ -216,7 +216,7 @@ o400 if [#<unload_mode> EQ 0]
       
       #<current_probed_distance> = 0;
       o411 do
-          M66 P0 L3 Q0.01
+          M66 P[#<_tc_input_th>] L3 Q0.01
           G1 G91 Z-0.1 F100
           G90
           #<current_probed_distance> = [#<current_probed_distance> + 0.1]
