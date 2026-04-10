@@ -23,7 +23,7 @@ o100 endif
 G4 P0
 ; Check offset mode
 o101 if [#<_irt_offset_mode> EQ 0]
-  (abort, ATCI:1|Probing Aborted|The system is set to "Probe on Load." Tools will be automatically measured the first time they are picked up from the rack. Go to "ATC Options" if you prefer to probe all tools manually beforehand. [A-300-02])
+  (abort, ATCI:1|Probing Not Required|The ATC is set to "Probe new offset after loading". Tools will be automatically measured when they are picked up from the rack. Go to "ATC Options" if you wish to change this setting. [A-300-02])
 o101 endif
 G4 P0
 
