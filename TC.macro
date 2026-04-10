@@ -121,7 +121,7 @@ o161 else
 o161 endif
 
 ;Force probing when user selected a tool without an offset
-o170 if [#<probing> EQ 0 AND #<load_offset_mode> GT 0]
+o170 if [#<probing> EQ 0 AND #<selected_tool_cache> NE 0 AND #<load_offset_mode> GT 0]
   G65 P2 Q[#<selected_tool_cache>] R2
   o171 if [#<_value> EQ 0]
     (print, ATCI:0|Tool #<selected_tool_cache> Offset Missing|"Resume" to probe the tool on pick-up, "Reset" if the slot is empty or the wrong tool was selected. [U-TCM-01])
