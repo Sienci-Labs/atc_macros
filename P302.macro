@@ -48,7 +48,7 @@ M9
 G4 P0.1
 
 ;Set Units as MM
-o101 if [#4006 EQ 20]
+o101 if [#<_imperial>]
     ;if current is SAE then switch units for macro and retain flag for later
     (print, Setting units to MM during probe utility, will revert to previous units after completion.)
     #<setUnits> = 1
