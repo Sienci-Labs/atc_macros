@@ -11,7 +11,7 @@ o100 endif
 ; ******** BASIC SETUP ********
 
 ; The number of slots in your magazine. Defined in P100.macro, will abort if not defined.
-;#<_tc_slots> = 6; Enable for Ad-hoc definition.
+#<_tc_slots> = 4; Enable for Ad-hoc definition.
 
 o101 if [[EXISTS[#<_tc_slots>]] EQ 0]
   (abort, ATCI:1|Tool Changer Disabled|Setup parameter "_tc_slots" missing. Please run ATC Setup and try again. [A-200-03])
@@ -85,7 +85,7 @@ o105 endif
 ; TODO Refine the actual position
 
 #<_tc_safe_x> = #5381 ; X coordinate should be identical to the TLS
-#<_tc_safe_y> = -300    ; Fixed value for now, can update to dynamic value based on rack keepouts at a later date once we vetted reliability.
+#<_tc_safe_y> = 0    ; Fixed value for now, can update to dynamic value based on rack keepouts at a later date once we vetted reliability.
 (debug, Safe Position: X#<_tc_safe_x> Y#<_tc_safe_y>)
 
 ; The Y machine coordinate positon for Y-axis pulloff.
@@ -120,10 +120,10 @@ G65P1Q687S[#<keepout_y_max>]
 ; Keepout feature on/off
 o104 if [#<_tc_slots> EQ 0]
   (print, Keepout Feature: 0)
-  G65P1Q683S0;
+  ;G65P1Q683S0;
 o104 else
   (print, Keepout Feature: 1)
-  G65P1Q683S3;
+  ;G65P1Q683S3;
 o104 endif
 
 ; ******** Z Axis ********
