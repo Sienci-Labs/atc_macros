@@ -82,7 +82,7 @@ G4 P0
 M66 P[#<_tc_input_th>] L4 Q0.01
 G4 P0
 o104 if [#5399 EQ -1]
-    (abort, ATCI:1|Utility Aborted|The Stud-Finder must be pre-triggered to start the utility. Jog the spindle until the sensor is ~1mm above pull-stud and the indicator LED is on, then try again. [A-302-03])
+    (abort, ATCI:1|Utility Aborted|The Stud-Finder must be pre-triggered to start the utility. Jog the spindle until the sensor is ~1/32" or ~1mm above pull-stud and the indicator LED is on, then try again. [A-302-03])
 o104 endif
 
 (print, Disabling safe keepouts...)
