@@ -62,7 +62,7 @@ M66 P[#<_tc_input_rack>] L3 Q0.01
 G4 P0
 
 o102 if [#5399 NE -1]
-    (abort, ATCI:1|Utility Aborted|The rack sensor does not detect a rack. Please ensure the tool rack is physically installed and the rack sensor is triggered, then trying again. [A-302-01])
+    (abort, ATCI:1|Utility Aborted|The rack sensor does not detect a rack. Please ensure the tool rack is installed and the rack sensor is triggered, then try again. [A-302-01])
 o102 endif
 
 ;check for rack configuration

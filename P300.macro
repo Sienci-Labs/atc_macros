@@ -30,7 +30,7 @@ G4 P0
 ; Check rack presence
 M66 P[#<_tc_input_rack>] L4 Q0.01
 o102 if [#5399 EQ -1]
-  (abort, ATCI:1|Probing Aborted|The rack sensor does not detect a rack. Please ensure the tool rack is physically installed and the rack sensor is triggered, then trying again. [A-300-03])
+  (abort, ATCI:1|Probing Aborted|The rack sensor does not detect a rack. Please ensure the tool rack is installed and the rack sensor is triggered, then try again. [A-300-03])
 o102 endif
 G4 P0.1
 
